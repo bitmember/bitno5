@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<link rel="stylesheet" href="fontawsome/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="./CSS/mo.css">
+<style>
+  .top{
+   
+   border-style: double;
+   border-radius: 23px;
+   width: 90%;
+   height: 25%;
+   border-color: red;
+   background-color: aliceblue;
+   float:right;
+ }
+</style>
+</head>
+<body>  
+<header>
+<div class="dropdown">
+<i id="o"  class="fas fa-bars"></i>
+  <button class="dropbtn">Menu</button><i class="fas fa-bars"></i>
+  <div class="dropdown-content">
+  <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="product.html"><i class="fa fa-fw fa-search"></i> Products</a> 
+  <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="yes.html"><i class="fa fa-fw fa-user"></i>sign_up</a>
+  </div>
+  <center>
+    <div class="top">
+      <h1 style="color:wheat;font-size:40pt;">Welcome to winner hospital</h1>
+        <h2 style="color:yellow;">for</h2>
+        <h3 style="color:lightcoral;">Good health services</h3>
+    </div>
+    </center>
+</div>
+
+
+</header>
+<div id="message">
+  <p id="letter" class="invalid"></p>
+  <p id="capital" class="invalid"></p>
+  <p id="number" class="invalid"></p>
+  <p id="length" class="invalid"></p>
+</div>
+				
+<script>
+  //declaring variables
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+myInput.onkeyup = function() {
+  // Validating lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validating  capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validating numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validating password length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+<div class="main">
+    <div class="a">
+      <div class="form">
+    <h2 style="color:teal;">Create your account</h2>
+    <p><span class="error">*Please fill all  required field</span></p>
+    <p id="result"></p>
+    <form method="post" action="service.html">
+    <b> Name: </b><br>
+      <input type="text" class="num" name="name"required>
+      <span class="error">* <br></span>
+      <br><br>
+      <b>E-mail:</b><br>
+       <input type="text" class="num" name="email"required>
+       <span class="error">* <br></span>
+      <br><br>
+      <b> Phone number:</b><br> 
+      <input type="number" class="num" name="phoneNumber">
+      <br><br>
+      <b> Password:</b><br>
+      <input type="password" class="num" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+       title="Must contain at least one number and one uppercase and lowercase letter, 
+       and at least 8 or more characters" required>
+    
+      <span class="error">* <br></span>
+      <br><br>
+      <b>Confirm password:</b><br>
+      <input type="password" class="num" name="Cpassword"required>
+      <span class="error">* <br></span>
+      <br><br>
+      <input id="p" type="submit" name="sign_up" value="CREATE ACCOUNT"/> 
+    </form>
+    </div>
+    </div>
+    <div class="a">
+      <img src="img/out.jpg">
+      
+      <h1 style="color:teal;">Welcome to winner hospital</h1>
+      <h2 style="color:green;">for</h2>
+      <h3 style="color:blueviolet;">Good health services</h3>
+      <div id="option">
+        <select name="dropdown">
+            <optgroup label="DISEASES">
+                <option value="skin diseases">Skin diseases</option>
+                <option value="cholera">Cholera</option>
+                <option value="gonorrhea">gonorrhea</option>
+                <option value="influenza">influenza</option>
+                <option value="malaria">malaria</option>
+                <option value="norovirus">norovirus</option>
+                <option value="dengue fever">Dengue fever</option>
+                <option value="coronavirus disease 2019">CoronaVirus Disease 2019</option>
+                <option value="cytomegalovirus">cytomegalovirus</option>
+                <option value="botulism">Botulism</option>
+                <a><option value="andenovirus">andenovirus</option></a>
+            </optgroup> 
+                   <optgroup label="MEDICAL LAB">
+                       <option value="skin diseases">Skin diseases</option>
+                       <option value="cholera">Cholera</option>
+                       <option value="gonorrhea">gonorrhea</option>
+                       <option value="influenza">influenza</option>
+                       <option value="malaria">malaria</option>
+                       <option value="norovirus">norovirus</option>
+                       <option value="dengue fever">Dengue fever</option>
+                       <option value="coronavirus disease 2019">CoronaVirus Disease 2019</option>
+                       <option value="cytomegalovirus">cytomegalovirus</option>
+                       <option value="botulism">Botulism</option>
+                       <option value="andenovirus">andenovirus</option>
+                   </optgroup>
+          </select>
+          </div>
+    </div>
+    </div>
+    
+    </body>
+    </html>

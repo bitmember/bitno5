@@ -1,0 +1,117 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project test</title>
+    <link rel="stylesheet" href="./fontawsome/css/all.css">
+    <link rel="stylesheet" href="./CSS/mo.css">
+    <style> 
+      
+        </style>
+</head>
+<body>
+    <!--fisrt section div-->
+    <header>
+      <div class="dropdown">
+        <i id="o"  class="fas fa-bars"></i>
+          <button class="dropbtn">Menu</button><i class="fas fa-bars"></i>
+          <div class="dropdown-content">
+          <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+          <a href="product.thml"><i class="fa fa-fw fa-search"></i>Products</a> 
+          <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+          <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+          <a href="yes.html"><i class="fa fa-fw fa-user"></i>sign up</a>
+          </div>
+        </div>
+    </header> 
+   
+    <script type="text/javascript">
+        function validateform(){
+            var name=document.myform.name.value;
+            var firstpassword=document.myform.password.value;
+            var secondpassword=document.myform.password2.value;
+            if(name==null||name==""){
+                alert("Name can not be empty");return false;
+            }
+            else if(firstpassword==secondpassword){
+                return true;
+            }
+            else{
+                alert("password does not match!");return false;
+            }
+        }
+    </script>
+    
+      <div class="main">
+        <div class="a">
+    <h1 style="color:teal;">Fill your information and log in</h1>
+    <form name="myform"method="post"action="register.html"onsubmit="return validateform()">
+    <p><b>User ame:</b></p>
+    <input type="text"name="name"><br/>
+    <p><b>Password</b></p>
+    <input type="password"name="password"required/><br/>
+    <p></p><b>Re-Type Password</b></p>
+    <input type="password"name="password2"/><br/><br/>
+    <input id="p" type="submit" name="log_in" value="LOG IN"/>
+    </form>
+    <h3 style="color:teal;">If you dont have account click bellow to create an account</h3>
+    <br>
+    <div class="an">
+      
+    <a style="overflow: hidden;
+    background-color:teal;
+   
+    font-size:20px;
+    border-radius:23px; 
+    
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color:white;  "href="yes.html"><i class="fa fa-fw fa-user"></i>Create account</a>
+    
+  </div>
+    </div>
+  
+    <div class="a">
+      <img id="home"  src="img/out.jpg">
+      <h1 style="color:teal;">Welcome to winner hospital</h1>
+      <h2 style="color:green;">for</h2>
+      <h3 style="color:blueviolet;">Good health services</h3>
+      <div id="option">
+        <select name="dropdown">
+            <optgroup label="DISEASES">
+                <option value="skin diseases">Skin diseases</option>
+                <option value="cholera">Cholera</option>
+                <option value="gonorrhea">gonorrhea</option>
+                <option value="influenza">influenza</option>
+                <option value="malaria">malaria</option>
+                <option value="norovirus">norovirus</option>
+                <option value="dengue fever">Dengue fever</option>
+                <option value="coronavirus disease 2019">CoronaVirus Disease 2019</option>
+                <option value="cytomegalovirus">cytomegalovirus</option>
+                <option value="botulism">Botulism</option>
+                <a><option value="andenovirus">andenovirus</option></a>
+            </optgroup> 
+                   <optgroup label="MEDICAL LAB">
+                       <option value="skin diseases">Skin diseases</option>
+                       <option value="cholera">Cholera</option>
+                       <option value="gonorrhea">gonorrhea</option>
+                       <option value="influenza">influenza</option>
+                       <option value="malaria">malaria</option>
+                       <option value="norovirus">norovirus</option>
+                       <option value="dengue fever">Dengue fever</option>
+                       <option value="coronavirus disease 2019">CoronaVirus Disease 2019</option>
+                       <option value="cytomegalovirus">cytomegalovirus</option>
+                       <option value="botulism">Botulism</option>
+                       <option value="andenovirus">andenovirus</option>
+                   </optgroup>
+          </select>
+          </div>
+  </div>
+  </div>
+</body>
+</html>
